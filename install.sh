@@ -2,6 +2,7 @@
 
 # Local variables
 origDir="`pwd`" ;
+enableFileName=${origDir}/enable ;
 
 # Fetch the VIM repository
 if ! test -d vim ; then
@@ -31,5 +32,8 @@ make VIMRUNTIMEDIR=${origDir}/release/share/vim/vim81 -j16
 # Install
 make install 
 
-echo "VIM_HOME=${origDir}/release" > ${origDir}/enable;
-echo "export PATH=$VIM_HOME/bin:$PATH" >> ${origDir}/enable;
+# Write the enable file
+echo "#!/bin/bash" > ${enableFileName} ;
+echo " " >> ${enableFileName} ;
+echo "VIM_HOME=${origDir}/release" >> ${enableFileName} ;
+echo "export PATH=\$VIM_HOME/bin:\$PATH" >> ${enableFileName} ;

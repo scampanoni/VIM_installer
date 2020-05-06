@@ -2,7 +2,7 @@ all:
 	./install.sh
 
 uninstall:
-	rm -rf release ;
+	rm -rf release enable ;
 
 clean:
 	rm -rf vim
