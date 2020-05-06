@@ -30,3 +30,6 @@ make VIMRUNTIMEDIR=${origDir}/release/share/vim/vim81 -j16
 
 # Install
 make install 
+
+echo "VIM_HOME=${origDir}/release" > ${origDir}/enable;
+echo "export PATH=$VIM_HOME/bin:$PATH" >> ${origDir}/enable;
