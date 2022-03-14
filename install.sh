@@ -20,10 +20,10 @@ cd vim ;
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-pythoninterp=yes \
-            --with-python-config-dir=/usr/lib/python2.7/site-packages/firewall/config \
             --enable-python3interp=yes \
-            --with-python3-config-dir=/opt/rh/rh-python34/root/usr/lib/python3.4/site-packages/sphinx/locale/.tx/config \
             --enable-cscope \
+            --enable-terminal   \
+            --enable-fontset    \
             --prefix=${origDir}/release
 
 # Compile
