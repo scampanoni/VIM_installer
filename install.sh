@@ -16,10 +16,12 @@ else
 fi
 
 # Configure
+#   Run 
+#     $./configure --help
+#   to see all options
 cd vim ;
 ./configure --with-features=huge \
             --enable-multibyte \
-            --enable-pythoninterp=yes \
             --enable-python3interp=yes \
             --enable-cscope \
             --enable-terminal   \
